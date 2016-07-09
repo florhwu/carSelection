@@ -1,0 +1,101 @@
+<!DOCTYPE html >
+
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Car Change</title>
+<link rel="stylesheet" type="text/css" href="./css/car.css">
+</head>
+
+<body>
+<h1>Configure Your <span id='title-bold'>GT Super Sportscar</span></h1>
+<button id="start">Get Started</button>
+
+<div class='box'>
+    <h2 class='label'>Configuration</h2>
+    <form id='config'>
+        <input type="radio" name="model" value="17790" checked> GT Manual
+            <span class='price'>$17,790.00</span>
+            <br>
+        <input type="radio" name="model" value="18590"> GT Automatic 
+            <span class='price'>$18,590.00</span>
+            <br>
+        <input type="radio" name="model" value="22455"> GT-S Manual 
+            <span class='price'>$22,455.00</span>
+            <br>
+        <input type="radio" name="model" value="23155"> GT-S Sportshif 
+            <span class='price'>$23,155.00</span>
+    </form>
+</div>
+
+<div class='box'>
+    <h2 class='label'>Factory Options</h2>
+    <form id='factory-options'>
+        <div class='info'>
+            <input type="radio" name="combo" value="1235" checked> Option Combo #1
+                <span class='price'>$1,235.00</span>
+                <ul>
+                    <li>Power Windows, Doors, Cruise Control</li>
+                </ul>
+                <br>
+        </div>
+        <div class='info'>
+            <input type="radio" name="combo" value="3354"> Option Combo #2 
+                <span class='price'>$3,354.00</span>
+                <ul>
+                    <li>Rear Spoiler, Fog Lamps</li>
+                    <li>Keyless Entry</li>
+                    <li>Power Tilt, Slide Moonroof</li>
+                    <li>Power Windows, Doors, Cruise Control</li>
+                </ul>
+                <br>
+        </div>
+        <div class='info'>
+            <input type="radio" name="combo" value="0"> No Combo 
+                <span class='price'>$0.00</span>
+                <br>
+        </div>
+    </form>
+</div>
+
+<div class='box'>
+    <h2 class='label'>Dealer Options</h2>
+    <form id='dealer-options'>
+        <div class='info'>
+            <input type="checkbox" name="dealer-options" value="550">Upgraded Stereo System
+                <span class='price'>$550.00</span>
+                <br>
+        </div>
+        <div class='info'>
+            <input type="checkbox" name="dealer-options" value="339">VIP Security System
+                <span class='price'>$399.00</span>
+                <br>
+        </div>
+        <div class='info'>
+        <input type="checkbox" name="dealer-options" value="295">Auto-Dimming Mirror
+            <span class='price'>$295.00</span>
+        </div>
+    </form>
+</div>
+
+<div id='total' class='box'>
+    Total: <span id='total-price'></span>
+    <button onClick='calculateTotal()' id='calculate' class='price'>Calculate</button>
+</div>
+
+<div id='car-preview'> 
+    <img id='car-img' src="./img/black.jpg" alt="car">
+    <select id='carColors' onchange="viewCar()">
+        <option value="black">Black
+        <option value="blue">Blue
+        <option value="red">Red
+        <option value="silver">Silver
+        <option value="white">White
+    </select>
+    <p> Choose a Color </p>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="./js/car.js"></script>
+</body>
+</html>
